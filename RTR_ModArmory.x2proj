@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Default" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Guid>ec0e4897-e311-44d8-bbab-e1aafa8c3ccf</Guid>
+    <Name>RTR_ModArmory</Name>
+    <Description>Description of My XCOM 2 Mod.</Description>
+    <SteamPublishID>0</SteamPublishID>
+    <AssemblyName>RTR_ModArmory</AssemblyName>
+    <RootNamespace>RTR_ModArmory</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Config\" />
+    <Folder Include="Content\" />
+    <Folder Include="Localization\" />
+    <Folder Include="Src\" />
+    <Folder Include="Src\RTR_ModArmory\" />
+    <Folder Include="Src\RTR_ModArmory\Classes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\XComRTRModWeapons.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\LWAssaultRifle_LS.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\LWAttachments_LS.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\LWCannon_LS.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\LWPistol_LS.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\LWShotgun_LS.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\LWSMG_BM.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\LWSMG_CV.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\LWSMG_LS.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\LWSMG_MG.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\LWSniperRifle_LS.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\UILibrary_LW_LaserPack.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\UILibrary_SMG.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ReadMe.txt" />
+    <Content Include="ModPreview.jpg" />
+    <Content Include="Config\XComEditor.ini" />
+    <Content Include="Config\XComEngine.ini" />
+    <Content Include="Config\XComGame.ini" />
+    <Content Include="Localization\XComGame.int" />
+    <Content Include="Src\RTR_ModArmory\Classes\X2Ability_RTRModWeapons.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\RTR_ModArmory\Classes\X2DownloadableContentInfo_RTR_ModArmory.uc" />
+    <Content Include="Src\RTR_ModArmory\Classes\X2Item_RTRModArmory_Schematic.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\RTR_ModArmory\Classes\X2Item_RTRModWeapons.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\RTR_ModArmory\Classes\X2Item_RTRModWeaponUpgrades.uc">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildLocalExtensionPath)\XCOM2.targets" />
+</Project>
