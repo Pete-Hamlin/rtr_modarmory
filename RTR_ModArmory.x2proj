@@ -75,6 +75,9 @@
     <Content Include="Src\RTR_ModArmory\Classes\X2Item_RTRModWeaponUpgrades.uc">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Src\RTR_ModArmory\Classes\X2StrategyItem_RTRModArmory.uc">
+      <SubType>Content</SubType>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildLocalExtensionPath)\XCOM2.targets" />
 </Project>
