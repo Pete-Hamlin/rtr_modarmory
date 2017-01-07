@@ -5,6 +5,8 @@ class X2Item_RTRModWeapons extends X2Item config(RTRModWeapons);
 //Config
 
 var config bool CONV_SMG_SUPPRESSION;
+var config bool AMMOLESS_LASERS;
+
 var config bool INFINITE_MAG_WEAPONS;
 var config bool INFINITE_LASER_WEAPONS;
 var config bool INFINITE_BEAM_WEAPONS;
@@ -537,6 +539,9 @@ static function X2DataTemplate CreateTemplate_SMG(name WeaponType, name WeapTemp
 
 		Template.DamageTypeTemplateName = 'Projectile_BeamXCom';
 		Template.BaseItem = 'SMG_LS';
+		if (default.AMMOLESS_LASERS == true) {
+			Template.InfiniteAmmo = true;
+		}
 
 		if (class'X2Item_RTRModArmory_Schematic'.default.INFINITE_LASER_WEAPONS == false)
 		{
@@ -645,6 +650,10 @@ static function X2DataTemplate CreateTemplate_AssaultRifle(name WeaponType, name
 
 		Template.DamageTypeTemplateName = 'Projectile_BeamXCom';
 		Template.BaseItem = 'AssaultRifle_LS1'; // Which item this will be upgraded from
+
+		if (default.AMMOLESS_LASERS == true) {
+			Template.InfiniteAmmo = true;
+		}
 
 		if (WeapTier == 3)
 		{
@@ -764,6 +773,11 @@ static function X2DataTemplate CreateTemplate_Cannon(name WeaponType, name WeapT
 
 		Template.BaseItem = 'Cannon_LS';
 		Template.DamageTypeTemplateName = 'Projectile_BeamXCom';
+
+		if (default.AMMOLESS_LASERS == true) {
+			Template.InfiniteAmmo = true;
+		}
+
 		if (class'X2Item_RTRModArmory_Schematic'.default.INFINITE_LASER_WEAPONS == false)
 		{
 			Template.CanBeBuilt = true;
@@ -860,14 +874,17 @@ static function X2DataTemplate CreateTemplate_Shotgun(name WeaponType, name Weap
 		Template.strImage = "img:///UILibrary_LW_LaserPack.LaserShotgun_Base";
 
 		// This all the resources; sounds, animations, models, physics, the works.
-	Template.GameArchetype = "LWShotgun_LS.Archetype.WP_Shotgun_LS";
+		Template.GameArchetype = "LWShotgun_LS.Archetype.WP_Shotgun_LS";
 
-	Template.UIArmoryCameraPointTag = 'UIPawnLocation_WeaponUpgrade_Shotgun';
-	Template.AddDefaultAttachment('Mag', "LWShotgun_LS.Meshes.SK_LaserShotgun_Mag_A", , "img:///UILibrary_LW_LaserPack.LaserShotgun_MagA");
-	Template.AddDefaultAttachment('Stock', "LWShotgun_LS.Meshes.SK_LaserShotgun_Stock_A", , "img:///UILibrary_LW_LaserPack.LaserShotgun_StockA");
-	Template.AddDefaultAttachment('Reargrip', "LWAttachments_LS.Meshes.SK_Laser_Trigger_A", , "img:///UILibrary_LW_LaserPack.LaserShotgun_TriggerA");
-	Template.AddDefaultAttachment('Foregrip', "LWAttachments_LS.Meshes.SK_Laser_Foregrip_A", , "img:///UILibrary_LW_LaserPack.LaserShotgun_ForegripA");
+		Template.UIArmoryCameraPointTag = 'UIPawnLocation_WeaponUpgrade_Shotgun';
+		Template.AddDefaultAttachment('Mag', "LWShotgun_LS.Meshes.SK_LaserShotgun_Mag_A", , "img:///UILibrary_LW_LaserPack.LaserShotgun_MagA");
+		Template.AddDefaultAttachment('Stock', "LWShotgun_LS.Meshes.SK_LaserShotgun_Stock_A", , "img:///UILibrary_LW_LaserPack.LaserShotgun_StockA");
+		Template.AddDefaultAttachment('Reargrip', "LWAttachments_LS.Meshes.SK_Laser_Trigger_A", , "img:///UILibrary_LW_LaserPack.LaserShotgun_TriggerA");
+		Template.AddDefaultAttachment('Foregrip', "LWAttachments_LS.Meshes.SK_Laser_Foregrip_A", , "img:///UILibrary_LW_LaserPack.LaserShotgun_ForegripA");
 	
+		if (default.AMMOLESS_LASERS == true) {
+			Template.InfiniteAmmo = true;
+		}
 
 		Template.DamageTypeTemplateName = 'Projectile_BeamXCom';
 		Template.BaseItem = 'Shotgun_LS1';
@@ -979,6 +996,10 @@ static function X2DataTemplate CreateTemplate_SniperRifle(name WeaponType, name 
 		Template.AddDefaultAttachment('Foregrip', "LWAttachments_LS.Meshes.SK_Laser_Foregrip_A", , "img:///UILibrary_LW_LaserPack.LaserSniper_ForegripA");
 		Template.AddDefaultAttachment('Optic', "LWSniperRifle_LS.Meshes.SK_LaserSniper_Optic_A", , "img:///UILibrary_LW_LaserPack.LaserSniper_OpticA");
 
+		if (default.AMMOLESS_LASERS == true) {
+			Template.InfiniteAmmo = true;
+		}
+
 		Template.DamageTypeTemplateName = 'Projectile_BeamXCom';
 		Template.BaseItem = 'SniperRifle_LS1'; // Which item this will be upgraded from
 		if (default.INFINITE_LASER_WEAPONS == false)
@@ -1077,6 +1098,10 @@ static function X2DataTemplate CreateTemplate_Pistol(name WeaponType, name WeapT
 		Template.GameArchetype = "LWPistol_LS.Archetype.WP_Pistol_LS";
 		Template.strImage = "img:///UILibrary_LW_LaserPack.Inv_Laser_Pistol";
 		Template.EquipSound = "Secondary_Weapon_Equip_Beam";
+
+		if (default.AMMOLESS_LASERS == true) {
+			Template.InfiniteAmmo = true;
+		}
 
 		Template.SetAnimationNameForAbility('FanFire', 'FF_FireMultiShotBeamA');
 		Template.DamageTypeTemplateName = 'Projectile_BeamXCom';

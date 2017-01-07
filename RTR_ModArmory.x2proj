@@ -17,6 +17,12 @@
     <Folder Include="Src\RTR_ModArmory\Classes\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Config\XComCovertOpsGear.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComGrimyLootMod.ini">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Config\XComRTRModWeapons.ini">
       <SubType>Content</SubType>
     </Content>
